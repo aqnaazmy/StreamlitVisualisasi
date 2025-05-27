@@ -11,7 +11,7 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-uri = os.getenv("MONGO_URI")
+uri = os.secrets("MONGO_URI")
 
 st.set_page_config(layout="wide")
 
