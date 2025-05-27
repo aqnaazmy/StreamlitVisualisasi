@@ -11,8 +11,10 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-uri = st.secrets("MONGO_URI")
-
+uri = "mongodb+srv://zenpose:capstone12345@capestone.o68xbne.mongodb.net/?retryWrites=true&w=majority&appName=capestone"
+client = MongoClient(uri)
+db = client['zenPoseDatabase']
+collection = db['yogaNewsMultiSource']
 st.set_page_config(layout="wide")
 
 sns.set(style="whitegrid")
